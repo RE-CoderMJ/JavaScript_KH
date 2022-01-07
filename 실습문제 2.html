@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px; 
+            height: 100px; 
+            background-color: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>문제 1. 색상 선택후 변경 버튼을 클릭하면 색상이 변경되도록 만들어보시오</h3>
+    <div id="box"></div>
+
+    <input type="color" id="color">
+    <button onclick=changeColor();>변경</button>
+
+    <script>
+        function changeColor(){
+            // var color = document.getElementById("color");
+            // var box = document.getElementById("box");
+         
+            // box.style.backgroundColor = color.value;
+            document.getElementById("box").style.backgroundColor = document.getElementById("color").value;
+            // 위 처럼 한줄로 줄이기 가능함
+        }
+    </script>
+    <hr>
+    <br><br>
+
+    <h3>문제 2. 버튼에 따른 크기 조절이 가능하게 만들어 보시오</h3>
+    <!-- <div id="box2"></div>
+    <button onclick="changeSize50();">50x50</button>
+    <button onclick="changeSize100();">원본(100x100)</button>
+    <button onclick="changeSize200();">200x200</button>
+
+    <script>
+        
+        var box2 = document.getElementById("box2");
+        
+        function changeSize50(){
+            box2.style.width = "50px";
+            box2.style.height = "50px";
+        }
+
+        function changeSize100(){
+            box2.style.width = "100px";
+            box2.style.height = "100px";
+        }
+
+        function changeSize200(){
+            box2.style.width = "200px";
+            box2.style.height = "200px";
+        }
+    </script>
+    -->
+
+    <div id="box2"></div>
+    <button onclick="changeSize(50);">50x50</button>
+    <button onclick="changeSize(100);">원본(100x100)</button>
+    <button onclick="changeSize(200);">200x200</button>
+
+    <script>
+        function changeSize(size){
+            let box2 = document.getElementById("box2");
+
+            box2.style.width = size + "px";
+            box2.style.height = size + "px";
+        }
+        // 이렇게 함수를 하나로 줄일 수 있음!
+    </script>
+    
+</body>
+</html>
