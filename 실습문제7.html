@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            border: 1px solid red;
+            width: 700px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>배열 실습 문제2</h1>
+    <p>
+        다음 보기에 있는 문자열을 가지고 정답과 같이 만드세요. (별도의 문자열을 쓰면 안됨) <br>
+        그리고 출력 부분에 출력하도록 하면 됩니다. 정답 : "brlove"
+        <fieldset>
+            <legend>보기</legend>
+            <label id="stringla1">r b</label><br>
+            <label id="stringla2">e v o l</label><br>
+        </fieldset>
+        <br><br>
+    </p>
+
+    <div id="result"></div>
+    <br>
+    <button onclick="sort();">처리</button>
+
+    <script>
+        let arr1 = document.getElementById("stringla1").innerHTML.split(" ");
+        let arr2 = document.getElementById("stringla2").innerHTML.split(" ");
+
+        function sort(){
+
+            arr1.sort(); // reverse도 가능
+            arr2.reverse();
+
+            const final = arr1.concat(arr2);
+            document.getElementById("result").innerHTML = final.join("");
+        }
+
+
+    </script>
+</body>
+</html>
